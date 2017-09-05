@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+@font-face {
+	font-family: 'ArcadeClassic';
+	src: url('ArcadeClassic.eot');
+	src: url('ArcadeClassic.eot?#iefix') format('embedded-opentype'),
+		url('ArcadeClassic.woff') format('woff'),
+		url('ArcadeClassic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+p{
+  font-family: arcadeClassic;
+}
+</style>
+</head>
+<body>
+<p>
+Hai
+</p>
+<script>
+//create canvas
+
+var game = document.createElement("canvas");
+game.style = "position:absolute; top:0; left: 0;";
+game.width = window.innerWidth;
+game.height = window.innerHeight;
+document.body.appendChild(game);
+var gamectx = game.getContext("2d");
+gamectx.fillStyle="#000000";
+gamectx.fillRect(0,0,game.width,game.height);
+
+//Textures
+gamectx.font="30px ArcadeClassic";
+gamectx.fillStyle = 'orangered';
+gamectx.textBaseline = 'top';
+gamectx.fillText("Hello World",10,50);
+</script>
+</body>
+</html>
